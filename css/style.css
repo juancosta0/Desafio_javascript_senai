@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    background: #FFFFFF;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+div#carousel {
+    height: 30%;
+    width: 100%;
+     max-height: 628px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+div#carousel-title a {
+    text-decoration: none;
+}
+
+div#carousel-title  {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+ul {
+	display: inline-block;
+}
+
+header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+header div {
+    display: inline;
+    vertical-align: middle;
+}
+
+header nav {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80vw;
+}
+
+header nav a {
+    color: #1351d8;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+header nav a:hover {
+    color: #1b357e;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+}
+
+main {
+    min-height: calc(100% - 167px);
+}
+
+nav#social {
+    display: inline;
+    width: 80%;
+}
+
+nav#social ul img {
+    width: 28px;
+}
+
+span.redesociais {
+    color: #ffffff;
+    vertical-align: super;
+}
+
+footer {
+    background: #1B357E;
+    padding: 20px;
+}
+
+footer div {
+    display: inline;
+    float: right;
+    margin-right: 40px;
+}
+
+button:hover {
+    background: #1b357e;
+}
+button {
+    background: #1351d8;
+    color: #fff;
+    border: 0px;
+    border-radius: 10px;
+}
+
+
+
+.botaoVoltar button,
+.botaoProximo button {
+    /* Tamanho e forma */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Deixa o botão redondo */
+
+    /* Cor e Borda */
+    background-color: #1351d8; /* Branco semitransparente */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+    /* Sombra suave */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+
+    /* Ícone (seta) */
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 50px; /* Alinha a seta verticalmente */
+
+    cursor: pointer;
+    transition: all 0.3s ease; /* Efeito suave de transição */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 4. Efeito ao passar o mouse */
+.botaoVoltar button:hover,
+.botaoProximo button:hover {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 5. Adicionando as setas usando CSS */
+.botaoVoltar button::before {
+    content: '‹'; /* Caractere de seta para a esquerda */
+}
+
+.botaoProximo button::before {
+    content: '›'; /* Caractere de seta para a direita */
+}
+
