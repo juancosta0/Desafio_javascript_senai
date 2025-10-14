@@ -80,7 +80,7 @@ function UpdateCompareTable() {
 
             const elemento = document.getElementById(idDaTabela)
 
-            if(idDaTabela){
+            if(elemento){
                 if(parteDoMeioDaPropriedade == 'image'){
                     elemento.innerHTML = `<img src="${arrayDeCarros[propriedade]}" alt="">`
                 }else{
