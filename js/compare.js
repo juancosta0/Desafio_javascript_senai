@@ -65,11 +65,36 @@ function HideCompare() {
 }
 
 function UpdateCompareTable() {
-    let car1 = carArr[0];
-    let car2 = carArr[1];
 
-    document.getElementById('compare_image_0').innerHTML =  `<img src="${car1.image}" alt="">`;
-    document.getElementById('compare_image_1').innerHTML = `<img src="${car2.image}" alt="">`; 
+    const carroComparacao = [carArr[0], carArr[1]]
+
+    carroComparacao.forEach((arrayDeCarros, indice) => {
+        for(const propriedade in arrayDeCarros){
+            let parteDoMeioDaPropriedade = propriedade.toLowerCase();
+
+            if(parteDoMeioDaPropriedade == 'nome'){
+                parteDoMeioDaPropriedade = 'modelo'
+            }
+
+            const idDaTabela = `compare_${parteDoMeioDaPropriedade}_${indice}`
+
+            const elemento = document.getElementById(idDaTabela)
+
+            if(idDaTabela){
+                if(parteDoMeioDaPropriedade == 'image'){
+                    elemento.innerHTML = `<img src="${arrayDeCarros[propriedade]}" alt="">`
+                }else{
+                    elemento.textContent = arrayDeCarros[propriedade]
+                }
+            }
+
+
+        }
+    } );
+
+    //document.getElementById('compare_image_0').innerHTML =  `<img src="${car1.image}" alt="">`;
+    //document.getElementById('compare_image_1').innerHTML = `<img src="${car2.image}" alt="">`; 
+
 
 
 }
