@@ -45,8 +45,8 @@ class Carousel {
                 const botaoVoltar = document.querySelector('.botaoVoltar');
                 const botaoProximo = document.querySelector('.botaoProximo');
 
-                botaoVoltar.addEventListener('click', () => Carousel.voltar());
-                botaoProximo.addEventListener('click', () => Carousel.proximo());
+                botaoVoltar.addEventListener('click', Carousel.voltar);
+                botaoProximo.addEventListener('click', Carousel.proximo());
             }
 
             else {
