@@ -68,7 +68,7 @@ function UpdateCompareTable() {
 
     const carroComparacao = [carArr[0], carArr[1]]
 
-    carroComparacao.forEach((arrayDeCarros, indice) => {
+    carroComparacao.forEach((arrayDeCarros, indice) => {//percorre cada elemento do array de carros, 
         for(const propriedade in arrayDeCarros){
             let parteDoMeioDaPropriedade = propriedade.toLowerCase();
 
